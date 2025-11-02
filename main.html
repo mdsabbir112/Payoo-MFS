@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Section After Login Button Clicked</title>
+    <link rel="stylesheet" href="Styles/payooStyle.css">
+    <!-- Google Font Cdn -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- DaisyUI Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- FontAwsome Kit -->
+ <script src="https://kit.fontawesome.com/ef45f973ec.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="outfit">
+    <header>
+        <nav class="mt-10">
+            <div class="flex justify-around items-center">
+                <img src="assets/Group.png" alt="BackGround Image">
+                <div class="relative -left-10">
+                    <h1 class="font-bold text-2xl ">$45000</h1>
+                    <p class="text-[rgba(8,8,8,0.5)]">Available Balance</p>
+                </div>
+                <button class="btn  bg-black  text-white rounded-md"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+            </div>
+            <hr class="mt-4">
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="mx-6 mt-8 mb-6">
+                <h1 class="font-bold text-3xl text-[#080808]">🔥 Welcome to Payooo!</h1>
+                <p class=" text-[rgba(8,8,8,0.5)] mt-2 ">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            </div>
+        </section>
+
+        <!-- Cards of Transaction -->
+        <section>
+            <div class="mx-6 mt-8 mb-6">
+                <div class="grid grid-cols-3 gap-4">
+                  
+                      <!-- Card-1 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body items-center text-center">
+                            <img class="w-6 h-6" src="assets/wallet1.png" alt="wallet1">
+                            <h2 class="card-title">Add Money</h2>
+                        </div>
+                    </div>
+
+                      <!-- Card-2 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body items-center text-center">
+                            <img class="w-6 h-6" src="assets/send1.png" alt="send1">
+                            <h2 class="card-title">💸 Cash Out</h2>
+                        </div>
+                    </div>
+
+                      <!-- Card-3 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body items-center text-center">
+                            <img class="w-6 h-6" src="assets/money1.png" alt="money1">
+                            <h2 class="card-title">Transfer Money</h2>
+                        </div>
+                    </div>
+
+                      <!-- Card-4 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body items-center text-center">
+                            <img class="w-6 h-6" src="assets/bonus1.png" alt="Get Bonus">
+                            <h2 class="card-title">Get Bonus</h2>
+                        </div>
+                    </div>
+
+                      <!-- Card-5 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body items-center text-center">
+                            <img class="w-6 h-6" src="assets/purse1.png" alt="purse1">
+                            <h2 class="card-title">Pay Bill</h2>
+                        </div>
+                    </div>
+
+                      <!-- Card-6 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body items-center text-center">
+                            <img class="w-6 h-6" src="assets/transaction1.png" alt="Transactions">
+                            <h2 class="card-title">Transactions</h2>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- login form Section -->
+
+    <section>
+        <div class=" bg-base-200 min-h-screen">
+
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <legend class="font-bold text-2xl pl-5">Add Money</legend>
+      <div class="card-body">
+        <!-- Select Input Field are here -->
+         <label class="text-lg">Select a Bank</label>
+            <select class="select select-primary">
+  <option disabled selected>Pick your Bank Option</option>
+  <option value="bkash">Bkash</option>
+  <option value="nagad">Nagad</option>
+  <option value="rocket">Rocket</option>
+  <option value="dbbl">DBBL</option>
+</select>
+
+    <!-- Main  -->
+        <fieldset class="fieldset">
+           <label class="text-lg">Account Number</label>
+          <input id="Account-number" type="number" class="input" placeholder="Enter Your Account Number" required />
+          <label class="text-lg">Amount to Add </label>
+          <input id="Account-number" type="number" class="input" placeholder="Add Amount to Withdraw" required />
+          <label class="text-lg">PIN Number </label>
+          <input id="pin-number" type="text" class="input" placeholder="Enter Your Pin" required />
+          <div><a class="link link-hover">Forgot password?</a></div>
+          <button id="login-btn" class="btn bg-blue-700 mt-4 rounded-md text-white text-xl" >Add Money</button>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
