@@ -24,7 +24,7 @@
             <div class="flex justify-around items-center">
                 <img src="assets/Group.png" alt="BackGround Image">
                 <div class="relative -left-10">
-                    <h1 class="font-bold text-2xl ">$45000</h1>
+                    <h1 class="font-bold text-2xl ">$<span id="main-balance">45000</span></h1>
                     <p class="text-[rgba(8,8,8,0.5)]">Available Balance</p>
                 </div>
                 <button class="btn  bg-black  text-white rounded-md"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
@@ -41,13 +41,13 @@
             </div>
         </section>
 
-        <!-- Cards of Transaction -->
+        <!-- Cards of Transaction section -->
         <section>
             <div class="mx-6 mt-8 mb-6">
                 <div class="grid grid-cols-3 gap-4">
                   
                       <!-- Card-1 -->
-                    <div class="card bg-base-100 shadow-xl">
+                    <div id="card1" class="card bg-base-100 shadow-xl">
                         <div class="card-body items-center text-center">
                             <img class="w-6 h-6" src="assets/wallet1.png" alt="wallet1">
                             <h2 class="card-title">Add Money</h2>
@@ -55,7 +55,7 @@
                     </div>
 
                       <!-- Card-2 -->
-                    <div class="card bg-base-100 shadow-xl">
+                    <div id="card2" class="card bg-base-100 shadow-xl">
                         <div class="card-body items-center text-center">
                             <img class="w-6 h-6" src="assets/send1.png" alt="send1">
                             <h2 class="card-title">💸 Cash Out</h2>
@@ -98,10 +98,10 @@
         </div>
     </section>
 
-    <!-- login form Section -->
+    <!-- Cash Add form Section -->
 
-    <section>
-        <div class=" bg-base-200 min-h-screen">
+    <section id="addmoney-section">
+        <form class=" bg-base-200 min-h-screen">
 
   <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -114,7 +114,7 @@
   <option value="bkash">Bkash</option>
   <option value="nagad">Nagad</option>
   <option value="rocket">Rocket</option>
-  <option value="dbbl">DBBL</option>
+  <option value="dbbl">DBBL</option> 
 </select>
 
     <!-- Main  -->
@@ -122,7 +122,7 @@
            <label class="text-lg">Account Number</label>
           <input id="Account-number" type="number" class="input" placeholder="Enter Your Account Number" required />
           <label class="text-lg">Amount to Add </label>
-          <input id="Account-number" type="number" class="input" placeholder="Add Amount to Withdraw" required />
+          <input id="add-amount" type="number" class="input" placeholder="Add Amount to Withdraw" required />
           <label class="text-lg">PIN Number </label>
           <input id="pin-number" type="text" class="input" placeholder="Enter Your Pin" required />
           <div><a class="link link-hover">Forgot password?</a></div>
@@ -131,13 +131,47 @@
       </div>
     </div>
   </div>
-</div>
+</form>
     </section>
+
+    <!-- Cash Out Section are from here -->
+    
+    <section id="cashout-section">
+        <form class=" bg-base-200 min-h-screen">
+
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <legend class="font-bold text-2xl pl-5">Cash Out </legend>
+      <div class="card-body">
+    <!-- Main  -->
+        <fieldset class="fieldset">
+           <label class="text-lg">Account Number</label>
+          <input id="Account-number-cashout" type="number" class="input" placeholder="Enter Your Account Number" required />
+          <label class="text-lg">Amount to Cash Out </label>
+          <input id="cashout-amount" type="number" class="input" placeholder="Add Amount to Withdraw" />
+          <label class="text-lg">PIN Number </label>
+          <input id="pin-number-cashout" type="text" class="input" placeholder="Enter Your Pin" required />
+          <div><a class="link link-hover">Forgot password?</a></div>
+          <button id="login-btn-cashout" class="btn bg-blue-700 mt-4 rounded-md text-white text-xl" >Cash Out </button>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</form>
+    </section>
+
+
+
     </main>
 
     <footer>
 
     </footer>
+
+    <!-- Linkup the Script File  -->
+     <script src="JS/Main.js"></script>
+     <script src="JS/CashOut.js"></script>
+     <script src="JS/toogle.js"></script>
     
 </body>
 </html>
