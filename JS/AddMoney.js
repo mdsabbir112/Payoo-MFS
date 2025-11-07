@@ -23,6 +23,12 @@ let correctionAdd = parseFloat(amountAdd);
  let mainBalanceFloat = parseFloat(mainBalance);
 //   console.log(typeof mainBalanceFloat);
 
+// Handle the various limitations
+if(correctionAdd <= 0){
+    alert('Invalid Amount. Please enter a valid amount greater than zero.');
+    return; // Stop the further code execution
+  }
+
 // Get the value of the Account Number and Pin fields
   let accountNumber = document.getElementById("Account-number").value;
   let pinNumber = document.getElementById("pin-number").value;
@@ -37,7 +43,26 @@ let correctionAdd = parseFloat(amountAdd);
     if (pinNumber.length === 4) {
      let sum = mainBalanceFloat + correctionAdd;
         document.getElementById("main-balance").innerText = sum;
-      alert("Login Successful");  
+
+
+        // Insert the transections details into the transection Sections
+        let transactionSection = document.getElementById('transaction-section');
+            transactionSection.style.textAlign = 'center';
+            let newTransaction  =  document.createElement('p');   
+
+        // This section is for Declare the date and the time
+        let now = new Date();
+
+         // transaction id generation
+                let transactionId = Math.floor(100000 + Math.random() * 900000); // Generates a random 6-digit number
+
+            // insert the details from the add money
+            newTransaction.innerText = `
+            Add Money: +${correctionAdd} | Account Number: ${accountNumberInt} | Trans Id: ${transactionId} | Date: ${now.toLocaleDateString()} | Time: ${now.toLocaleTimeString()}`
+
+            // append child into the main div section
+            transactionSection.appendChild(newTransaction);
+      alert("Money Added Successfully");  
     } 
     else {
       alert("Invalid Pin Number");
